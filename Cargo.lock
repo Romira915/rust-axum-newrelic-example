@@ -246,6 +246,8 @@ dependencies = [
 [[package]]
 name = "easy_init_newrelic_opentelemetry"
 version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8e23bcf10ab998254d65116f3514f924beb39aa1ce39c23e140d095485b1368"
 dependencies = [
  "anyhow",
  "opentelemetry",

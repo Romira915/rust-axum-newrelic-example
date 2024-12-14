@@ -1,13 +1,12 @@
 use axum::extract::MatchedPath;
 use axum::http::Request;
-use axum::{response::Html, routing::get, Router};
+use axum::{routing::get, Router};
 use rust_axum_newrelic_example::handler::handler;
 use rust_axum_newrelic_example::opentelemetry::init_opentelemetry;
 use tower::layer::util::{Identity, Stack};
 use tower::ServiceBuilder;
 use tower_http::classify::{ServerErrorsAsFailures, SharedClassifier};
 use tower_http::trace::{MakeSpan, TraceLayer};
-use tracing::instrument;
 use tracing::Span;
 
 #[tokio::main]

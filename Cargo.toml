@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 axum = { version = "0.7.9" }
 tokio = { version = "1.42.0", features = ["rt-multi-thread"] }
-easy_init_newrelic_opentelemetry = { path = "../easy_init_newrelic_opentelemetry" }
+easy_init_newrelic_opentelemetry = { version = "0.3.0" }
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.19", features = [
     "env-filter",

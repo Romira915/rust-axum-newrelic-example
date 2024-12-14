@@ -1,5 +1,5 @@
+use opentelemetry::trace::TraceError;
 use opentelemetry::trace::TracerProvider;
-use opentelemetry::trace::{TraceError, Tracer};
 use opentelemetry::KeyValue;
 use opentelemetry_otlp::{
     LogExporter, MetricExporter, Protocol, SpanExporter, WithExportConfig, WithHttpConfig,
