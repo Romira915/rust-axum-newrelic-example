@@ -1,0 +1,46 @@
+[package]
+name = "rust-axum-newrelic-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.7.9" }
+tokio = { version = "1.42.0", features = ["rt-multi-thread"] }
+easy_init_newrelic_opentelemetry = { path = "../easy_init_newrelic_opentelemetry" }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = [
+    "env-filter",
+    "fmt",
+    "std",
+    "time",
+] }
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["trace"] }
+
+opentelemetry = { version = "0.27.1", features = ["metrics", "logs"] }
+opentelemetry-http = "0.27.0"
+opentelemetry-otlp = { version = "0.27.0", features = [
+    "tonic",
+    "metrics",
+    "logs",
+    "tracing",
+    "http-proto",
+    "reqwest-client",
+    "reqwest-rustls",
+    "tls",
+    "tls-roots",
+    "opentelemetry-http",
+] }
+opentelemetry-semantic-conventions = { version = "0.27.0", features = [
+    "semconv_experimental",
+] }
+opentelemetry-stdout = { version = "0.27.0", features = ["logs"] }
+opentelemetry_sdk = { version = "0.27.1", features = [
+    "rt-tokio",
+    "logs",
+    "metrics",
+] }
+tracing-opentelemetry = { version = "0.28.0", features = [] }
+time = { version = "0.3.37", features = ["macros", "formatting"] }
+opentelemetry-appender-tracing = "0.27.0"
+anyhow = "1.0.94"
